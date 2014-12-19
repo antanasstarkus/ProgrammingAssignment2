@@ -4,8 +4,8 @@
 ## object that can cache its inverse.
 makeCacheMatrix <- function(x = matrix()) {
     cachedinvertedmatrix <- NULL ## creating an empty vector 
-    invertedmatrix <- solve(x) %*% x #assigning inverting the matrix
-    cachedinvertedmatrix <<- invertedmatrix #caching the result of calculation
+    invertedmatrix <- solve(x) ##inverting the matrix
+    cachedinvertedmatrix <<- invertedmatrix ##caching the result of calculation
     invertedmatrix #optional: returning the inverted matrix
   }
 ## This function computes the inverse of the special "matrix"
@@ -19,7 +19,7 @@ cacheSolve <- function(x, ...) {
     }
     else {
     message("no cached data, calculating")
-    invertedmatrix <- solve(x) %*% x ##inverts a matrix IF cached info is not present
+    invertedmatrix <- solve(x) ##inverts a matrix IF cached info is not present
     return(invertedmatrix) ## Return a matrix that is the inverse of 'x'
     }
   }
